@@ -2,7 +2,7 @@ import random
 
 WEAPONS = ['меч', 'палица']
 ARMORS = ['щит', 'кольчуга']
-MEDECINS = ['зелье']
+MEDECINS = ['зелье здоровья', 'зелье силы']
 
 class Hero:
 
@@ -19,7 +19,7 @@ class Hero:
             self.inventory[i] = (1,)
 
     def find_item(self, *item):
-        if item[0] in WEAPONS + ARMORS + MEDECINS:
+        if item[0] in WEAPONS + ARMORS:
             print(f'Вы нашли {item}')
             if item[0] in self.inventory.keys():
                 self.inventory[item[0]][0] += 1
